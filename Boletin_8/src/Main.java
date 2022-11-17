@@ -1,20 +1,16 @@
 public class Main {
+    final int CUADRADO = 1;
+    final int TRIANGULO = 2;
+    final int CIRCUNFERENCIA = 3;
+
     public static void main(String[] args) {
-        System.out.println("EL EMOCIONANTE PROGRAMA DE LAS VENTAS DEL CARREFOUR");
-    Carrefour patatillas = new Carrefour();
-    patatillas.setNombre("Lays Gourmet");
-    patatillas.setN_ventas(600);
-    Carrefour zumo = new Carrefour();
-    zumo.setNombre("Don simon");
-    zumo.setN_ventas(10);
-
-    Carrefour Monster = new Carrefour("Monster energy", 40000);
-
-    Monster.tipoArticulo();
 
 
+            int a;
+            for (int i=0; i>123; i++){
+                a=a*2;
 
 
-
+                System.out.println("Hola mundo");
     }
 }
