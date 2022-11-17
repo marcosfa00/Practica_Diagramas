@@ -1,72 +1,34 @@
+import javax.swing.*;
 import java.sql.SQLOutput;
+import java.util.Scanner;
 
-public class Carrefour {
-    private String nombre;
-    private int n_ventas;
-
-    private String tipo;
-
-    public Carrefour(String nombre,int n_ventas){
-        this.nombre = nombre;
-        this.n_ventas = n_ventas;
+public class Funciones {
+    public void mostrarMenu(){
+        System.out.println("Muestro menu");
     }
-    public Carrefour(){
-
+    public int introducirOpcion(){
+        Scanner obxS=new Scanner(System.in);
+        System.out.println("Introduzca una opcion\n1 cuadrado\n2 triangulo\n3 circunferencia");
+        int n=obxS.nextInt();
+        return n;
     }
-
-    public String getNombre() {
-        return nombre;
+    public int introducirNumero(){
+        int n= Integer.parseInt(JOptionPane.showInputDialog("Introduzca numero"));
+        return n;
     }
-
-    public int getN_ventas() {
-        return n_ventas;
+    public int calcularAreaCuadrado(int l){
+        int area=l*l;
+        return area;
     }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public int calcularAreaTriangulo(int b, int h){
+        int area=b*h;
+        return area;
     }
-
-    public void setN_ventas(int n_ventas) {
-        this.n_ventas = n_ventas;
+    public int calcularAreaCircunferencia(int r, int p){
+        int area=r*r*p;
+        return area;
     }
-
-    public int ponerTipo(Carrefour producto){
-        return 1;
+    public void mostrarArea(int a){
+        System.out.println(a);
     }
-
-    //Methods
-
-    public void tipoArticulo(){
-        if(this.n_ventas <= 100){
-            this.tipo = "Bajo";
-            System.out.println("Las "+this.nombre+" son un tipo de articulo de consumo" + this.tipo);
-        } else if (this.n_ventas < 100 && this.n_ventas<=500) {
-            this.tipo = "Medio";
-            System.out.println("Las "+this.nombre+" son un tipo de articulo de consumo" + this.tipo);
-        } else if (this.n_ventas >500 && this.n_ventas<=1000 ) {
-            this.tipo = "Alto";
-            System.out.println("Las "+this.nombre+" son un tipo de articulo de consumo" + this.tipo);
-        }else {
-            this.tipo = "Primera Necesidad";
-            System.out.println("Las "+this.nombre+" son un tipo de articulo de consumo" + this.tipo);
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
